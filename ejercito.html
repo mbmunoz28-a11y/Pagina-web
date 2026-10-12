@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página wed</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f7ff;
+            color: #17365d;
+            line-height: 1.7;
+        }
+
+        /* ENCABEZADO Y LOGO */
+        header {
+            background: #17324d;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #71bdff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #71bdff;
+        }
+
+        /* TITULO PRINCIPAL */
+        .portada {
+            padding: 65px 8%;
+            text-align: center;
+            background: linear-gradient(135deg, #d9ecff, #ffffff);
+        }
+
+        .portada h1 {
+            font-size: 40px;
+            color: #174a80;
+            margin-bottom: 15px;
+        }
+
+        .portada p {
+            font-size: 18px;
+        }
+
+        /* INFORMACIÓN Y JUSTIFICACIÓN */
+        .contenido {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            padding: 40px 6%;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        .tarjeta h2 {
+            color: #1764a0;
+            margin-bottom: 15px;
+        }
+
+        /* TABLA DE TRES COLUMNAS */
+        .tabla-contenedor {
+            margin: 10px 6% 40px;
+            overflow-x: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            border: 1px solid #b9d9f5;
+            padding: 18px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            text-align: center;
+            font-size: 23px;
+            color: #17365d;
+        }
+
+        th:nth-child(1) {
+            background: #d9c7ff;
+        }
+
+        th:nth-child(2) {
+            background: #bcebd8;
+        }
+
+        th:nth-child(3) {
+            background: #b9dcff;
+        }
+
+        td {
+            background: #fbfdff;
+        }
+
+        td h3 {
+            text-align: center;
+            color: #1764a0;
+            margin-bottom: 12px;
+        }
+
+        td ul {
+            padding-left: 20px;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background: #17324d;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* ADAPTACIÓN A CELULARES */
+        @media (max-width: 750px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .portada h1 {
+                font-size: 30px;
+            }
+
+            .contenido {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"> &lt;/&gt; páginawed</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#informacion">Información</a>
+            <a href="#justificacion">Justificación</a>
+            <a href="#tabla">Tabla</a>
+        </nav>
+    </header>
+
+    <section class="portada" id="inicio">
+        <h1>Lenguaje de prog</h1>
+        <p>PHP, laravel y HTML: son temas importantes para la prog.</p>
+    </section>
+
+    <section class="contenido" id="informacion">
+
+        <div class="tarjeta">
+            <h2> Inf general</h2>
+
+            <p>
+                En la programación existen diferentes lenguajes que permiten
+                desarrollar ideas,compartir conocimientos.
+                PH, HTML y laravel son herramientas utilizadas en el desarrollo.
+            </p>
+
+            <p>
+                Cada uno tiene características diferentes y cumple una
+                función importante en la sociedad actual.
+            </p>
+        </div>
+
+        <div class="tarjeta" id="justificacion">
+            <h2> Justificación</h2>
+
+            <p>
+                estos tres temas ayudan a comprender la
+                importancia de la tecnología y PHP permite
+                crear sitios dinámicos, HTML organiza el contenido de
+                las página web Laravel es un framework de desarrollo web de código abierto escrito en PHP.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="tabla-contenedor" id="tabla">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>PHP</th>
+                    <th>laravel</th>
+                    <th>HTML</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <h3> Programación</h3>
+                        <ul>
+                            <li>Es un lenguaje de programación del lado del servidor.</li>
+                            <li>Permite crear páginas web dinámicas.</li>
+                            <li>Se conecta con bases de datos.</li>
+                            <li>Se utiliza en sistemas como WordPress.</li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <h3> Idioma de programación</h3>
+                        <ul>
+                            <li>Arquitectura MVC: Separa la lógica de negocio, la interfaz de usuario y el control de datos..</li>
+                            <li>Es idioma oficial en numerosos países.</li>
+                            <li>Tiene una gran importancia histórica .</li>
+                            <li>Se utiliza en programación y la comunicación.</li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <h3> Páginas web</h3>
+                        <ul>
+                                       <li>Define la estructura de una página web.</li>
+                            <li>Permite agregar títulos, textos, imágenes y enlaces.</li>
+                            <li>Trabaja junto con CSS y JavaScript.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <footer>
+        <p> página wed de porg.</p>
+    </footer>
+
+</body>
+</html>
